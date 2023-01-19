@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css" />
+    <title>Exercício HTML~JS EBAC</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário A x B</h1>
+        <h2><b>A</b> não pode ser maior que <b>B</b></h2>
+        <form id="form">
+            <input type="number" id="inputA" required placeholder="Seletor A" />
+            <p class="field-value-error">O Seletor <b>A</b> não pode ser maior que o Seletor <b>B</b></p>
+            <input type="number" id="inputB" required placeholder="Seletor B" />
+            <button id="btn-submit" type="submit">Conferir</button>
+        </form>
+        <p class="success-message">Tudo certo! Você acabou de provar que B é maior do que A!</p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
