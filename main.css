@@ -5,114 +5,25 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
-header, footer {
+header {
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-header > .container,
-footer > .container {
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
-}
-
-nav {
-    background-color: #575fcf;
-    padding: 16px 0;
-    display: none;
-}
-
-nav li {
-    list-style: none;
-    display: inline;
-    margin-right: 16px;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-nav li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu-hamburguer {
-    width: 32px;
-    cursor: pointer;
-}
-
-.menu-hamburguer span {
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 4px;
-}
-
-section {
-
+    padding-bottom: 10px;
 }
 
 .container-flex {
     display: flex;
 }
 
-#sobre-a-loja img {
-    max-width: 400px;
-    margin-right: 24px;
-}
-
 section {
-    padding: 48px 0;
-}
-
-section h2 {
-    margin-bottom: 16px;
-}
-
-li {
-    list-style-type: none;
-}
-
-.lista-produtos {
-    flex-wrap: wrap;
-}
-
-.lista-produtos li {
-    list-style-type: none;
-    max-width: 30%;
-    margin-bottom: 24px;
-}
-
-.lista-produtos li img {
-    max-width: 100%;
-}
-
-.lista-produtos li h3 {
-    margin: 16px 0;
-}
-
-.item-central {
-    margin: 0 5%;
+    padding: 12px 0;
 }
 
 button {
@@ -127,16 +38,6 @@ button {
     font-style: italic;
     cursor: pointer;
     border-radius: 6px;
-}
-
-.price {
-    margin: 16px 0;
-    display: block;
-}
-
-.price del {
-    color: gray;
-    font-size: 14px;
 }
 
 .form-campo {
@@ -168,11 +69,3 @@ form button {
     max-width: 120px;
 }
 
-footer li {
-    list-style: none;
-    margin-left: 16px;
-}
-
-footer li img {
-    height: 32px;
-}

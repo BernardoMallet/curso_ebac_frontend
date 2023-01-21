@@ -1,14 +1,12 @@
 $(document).ready(function(){
-    $('#carousel-img').slick({
-        autoplay: true,
-    })
-
-    $('.menu-hamburguer').click(function() {
-        $('nav').slideToggle();
-    })
-
     $('#telefone').mask('(00) 00000-0000', {
         placeholder: '(__) _____-____'
+    })
+    $('#cpf').mask('000.000.000-00', {
+        placeholder: '___.___.___-__'
+    })
+    $('#cep').mask('00000-000', {
+        placeholder: '_____-___'
     })
 
     $('form').validate({
@@ -23,18 +21,27 @@ $(document).ready(function(){
             telefone: {
                 required: true,
             },
-            menssagem: {
+            cpf: {
                 required: true,
             },
-            veiculoInteresse: {
+            endereçoCompleto: {
+                required: true,
+            },
+            cep: {
                 required: true,
             }
         },
         messages: {
-            nome: 'Por favor, insira o seu nome.'
+            nome: 'Por favor, insira o seu nome.',
+            email: 'Por favor, insira seu e-mail.',
+            telefone: 'Por favor, insira o seu número de telefone.',
+            cpf: 'Por favor, insira o seu CPF.',
+            endereçoCompleto: 'Por favor, insira o seu endereço completo.',
+            cep: 'Por favor, insira o seu CEP.'
         },
         submitHandler: function(form) {
-
+            $('input').val('');
+            alert('Dados enviados com sucesso!');
         },
         invalidHandler: function(evento, validador) {
             let camposIncorretos = validador.numberOfInvalids();
@@ -42,17 +49,5 @@ $(document).ready(function(){
                 alert(`Existem ${camposIncorretos} campos incorretos`)
             }
         }
-    })
-
-    $('.lista-produtos button').click(function(){
-        const destino = $('#contato');
-
-        const nomeVeiculo = $(this).parent().find('h3').text();
-
-        $('#veiculo-interesse').val(nomeVeiculo);
-
-        $('html').animate({
-            scrollTop: destino.offset().top
-        }, 1000)
     })
 })
