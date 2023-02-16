@@ -1,0 +1,111 @@
+@import "maps.less";
+
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+.listStyleNone {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #colors[background-color];
+    color: #colors[textColor];
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+    
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+    header {
+        padding-bottom: 24px;
+        .avatarPerfil {
+            display: block;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.bio {
+    text-align: center;
+    &Nome {
+        font-size: 16px;
+        .marginBottom8();
+    }
+    &SubTitulo {
+        font-size: 14px;
+        .marginBottom8();
+    }
+    &Descricao {
+        font-size: 14px;
+        opacity: .7;
+    }
+}
+
+.redesSociais {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+    li {
+        .listStyleNone();
+
+        img {
+            transition: all ease .3s;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+.listaDosProjetos {
+    margin-top: 16px;
+        a {
+            text-decoration: none;
+            background-color: #colors[buttonColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[textColor];
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #colors[buttonColor];
+            transition: all ease .5s;
+
+            &:hover {
+                color: #colors[buttonColor];
+                background-color: transparent;
+                border: 2px solid #colors[buttonColor];
+            }
+        }
+
+    .listStyleNone();
+}
